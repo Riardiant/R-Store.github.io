@@ -1,0 +1,613 @@
+/* можно тут подключить шрифты альтернативным способом::
+@import url('тут найти ссылку в поиске google fonts css api')
+и вбить ее в ковычках*/
+
+  body {     
+    font-family: "Poppins", sans-serif;
+    /* background-color: rgba(17, 14, 12, 0.904); */
+    background-color: #151b0f;
+    background-image: url(../images/bg-img-world-of-warcraft.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    
+  }
+  
+  /* Fonts */
+  .poppins-regular {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .poppins-medium {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .poppins-semibold {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .poppins-bold {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .poppins-extrabold {
+    font-family: "Poppins", serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .poppins-black {
+    font-family: "Poppins", serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .poppins-thin-italic {
+    font-family: "Poppins", serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .poppins-extralight-italic {
+    font-family: "Poppins", serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .poppins-light-italic {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .poppins-regular-italic {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .poppins-medium-italic {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .poppins-semibold-italic {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .poppins-bold-italic {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  /* Fonts */
+
+/* --------------------------------------------------------------- */
+/* --------------------------------------------------------------- */
+/* --------------------------------------------------------------- */
+
+
+
+
+
+
+/* NAV-BAR */
+
+/* цвет-фона навбара */
+.navbar {
+    padding: 0;
+    margin: 0.5em;
+    border-radius: 0.7em;
+    background-color: rgba(64, 47, 46, 0.897);
+}
+
+.navbar-expand-lg .container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
+/* Настройки для надписи R-Store */
+.navbar-expand-lg .container-fluid .navbar-brand {
+    display: flex;
+    border-radius: 0.7em 0 0 0.7em;
+    width: 6em;
+    height: 3.5em;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color:  #2b1d1cb0;
+    color: #dfa811; 
+    font-size: 1.3em;
+    font-weight: 700;
+}
+/* Настройки для надписи R-Store при наведении */
+.navbar-expand-lg .container-fluid .navbar-brand:hover {
+    color: #ffffff;
+}
+
+/* слово CATALOG в навбаре */
+.navbar-expand-lg .navbar-nav .nav-link {
+    margin: 0.4em;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    padding-inline: 1.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+/* цвет Бутерброда когда наводимся на него */
+.navbar-toggler:hover {
+  background-color: rgba(129, 110, 108, 0.349);
+}
+
+/* СЛОВО CATALOG */
+/* цвет фона ссылок при наведении */
+.nav-link {
+  border-radius: 10px;
+}
+.nav-link:hover {
+    border-radius: 10px;
+    background-color: rgba(129, 110, 108, 0.349);
+    color: #ffffff;
+}
+
+
+/* CATALOG выпадное меню */
+/* drop-down-menu */
+.dropdown-menu {
+  background-color:  #2b1d1c;
+}
+.dropdown-item {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 600;
+}
+.dropdown-item:hover {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 600;
+  background-color: rgba(129, 110, 108, 0.349);
+}
+
+
+/* ФОРМА ПОИСКА И КНОПКИ ЮЗЕР И КОРЗИНА */
+.right-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* форма поиска */
+#form-search {
+  /* box-shadow: 0px 0px 5px 3px #dfa811; */
+  border: none;
+  background-color: #1a1a1ae1;
+  color: #ffffff;
+}
+#form-search:focus {
+  /* box-shadow: 0px 0px 5px 3px #dfa811; */
+  box-shadow: none;
+  border: 1px solid #dfa811;
+  background-color: #1a1a1ae1;
+}
+#form-search::placeholder {
+  color: #5c5c5c;
+}
+
+.btn-outline-warning {
+  color: #dfa811;
+  border: 1px solid #dfa811;
+}
+.btn-outline-warning:hover {
+  color: #1d1d1d;
+  border: 1px solid #dfa811;
+  background-color: #dfa811;
+}
+
+/* ------------------------------------- */
+/* КНОПКИ USER И КОРЗИНЫ */
+/* размер кнопок и отступы */
+.user-nav-btns {
+  margin-inline: 1rem;
+}
+.user-nav-btn *{
+  /* text-transform: capitalize; */
+  color: rgb(0, 0, 0);
+}
+
+.btn-user>a {
+  margin-inline: 0.7rem;
+  padding: 0.7rem;
+  padding-inline: 3rem;
+  border-radius: 10px;
+  background-color: #aa2409d0;
+}
+.btn-user>a:hover {
+  margin-inline: 0.7rem;
+  border-radius: 10px;
+  background-color: #bb270ae3;
+}
+ 
+.btn-cart>a {
+  margin-inline: 0.7rem;
+  padding: 0.7rem;
+  padding-inline: 2rem;
+  border-radius: 10px;
+  background-color: #180f01e0;
+}
+
+.btn-cart>a:hover {
+  margin-inline: 0.7rem;
+  border-radius: 10px;
+  background-color: #251b11dc;
+  /* background-color: #20170e; */
+}
+
+
+
+/* Выпадная менюшка регистрации */
+
+/* чтобы выпадная менюшка была ниже навбара */
+.dropdown>.dropdown-user-auth-container {
+  margin-top: 2rem;
+}
+.dropdown-user-auth-container * {
+  color: white;
+
+}
+.dropdown-user-auth-container li {
+  list-style: none;
+}
+
+.user-auth {
+  padding: 2rem 2rem 0 2rem;
+  /* display: inline-block; */
+  width: 450px;
+  background-color: #2b1d1c;
+  }
+
+
+
+.user-auth>li>h4{
+  text-align: center;
+  font-weight: 600;
+  color: #dfa811;
+}
+
+/* текст над полем ввода имени и пароля */
+.user-auth>li>label {
+  margin-top: 0.5rem;
+  color: rgba(255, 255, 255, 0.603);
+}
+
+/* поле ввода имени и пароля */
+.user-auth>li>input {
+  border: none;
+  background-color: #1a1a1ae1;
+}
+.user-auth>li>input:hover {
+  background-color: #1a1a1ae1;
+}
+.user-auth>li>input:focus {
+  background-color: #1a1a1ae1;
+  color: white;
+}
+.user-auth>li>input::placeholder {
+  color: rgba(255, 255, 255, 0.288);
+  font-size: 0.9rem;
+}
+
+
+/* кнопки   ЗАБЫЛИ ПАРОЛЬ И СОЗДАТЬ АККАУНТ */
+.btn-reg {
+  justify-content: center;
+}
+.user-auth>.btn-reg>li {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  margin-inline: 1rem;
+}
+.user-auth>.btn-reg>li>a {
+  padding: 0.6rem;
+  text-decoration: none;
+}
+#account {
+  background-color: #aa2409;
+  border-radius: 0.7rem;
+  font-weight: 500;
+}
+#account:hover {
+  background-color: #c52d0e;
+  border-radius: 0.7rem;
+  font-weight: 500;
+
+}
+.user-auth>.btn-reg>.drop-down-item>a:hover {
+  background-color: rgba(129, 110, 108, 0.349);
+  border-radius: 0.7rem;
+}
+/* -------------------------------------------------- */
+
+/* войти через привязанный аккаунт */
+.input-social { 
+  border-top: 1px solid #dfa811;
+  background-color: #1b1313;
+}
+
+.social-title {
+  padding-top: 1rem;
+  text-align: center;
+  align-items: center;
+}
+
+.social-wrapper {  
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  align-items: center;
+}
+.social-wrapper>a {
+  margin-inline: 1rem;
+  padding: 1rem;
+  border-radius: 50%;
+}
+.social-wrapper>a:hover {
+  background-color: #5c5c5c48;
+}
+
+
+
+
+
+
+/* NAV-BAR КОНЕЦ */
+
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+
+
+
+
+
+
+
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+
+
+/* КАРТОЧКА ТОВАРОВ */
+
+
+.contaner-fluid {
+  margin: 0.5rem;
+}
+.contaner-fluid .row {
+  margin: 0;
+  padding: 0;
+}
+
+/* Карточка товаров */
+.card {
+  border: 1px solid #504137;
+  background: #211510;
+  overflow: hidden;
+  z-index: 0;  
+}
+.card:hover {
+  border: 1.5px solid #f8b700;
+}
+
+/* Картинка Игры */
+.card img {
+  height: 20rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* скидка на игру */
+.discount {
+  position: absolute;
+  top: 10px;
+  /* bottom: 20px; */
+  right: 10px;
+  font-size: 1rem;
+}
+
+/* id-товара */
+.item-id {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+}
+
+.prices {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.finally-price {
+  font-size: 1.5rem;
+  color: white;
+
+}
+
+.primary-price {
+  text-decoration: line-through;  
+  color: rgb(169, 166, 146);
+
+}
+
+
+
+/* div в кот. я обернул название карточки товара
+чтобы можно было ввести название в две строки
+и размеры самой карточки не изменятся */
+.card-title-div {
+  height: 3.3rem;
+  text-transform: capitalize;
+}
+
+/* название игры */
+.card .card-title a {
+  color: #f8b700;
+  text-decoration: none;  
+  font-weight: 600;
+}
+.card .card-title a:hover {
+  color: #ffffff;
+}
+
+
+/* Краткое описание игры */
+.card-text { 
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.card-text a { 
+  color: #ebdec2;
+  text-decoration: none;
+}
+
+/* Кнопка КУПИТЬ */
+.btn-primary {
+  background: #dfa811;
+  border: none;
+  color: #211510;
+  font-weight: 600;
+}
+.btn-primary:hover {
+  background: #ffffff;
+  color: #211510;
+}
+/* Карточка товаров */
+
+
+
+
+
+
+
+
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+
+/* FOOTER */
+
+/* сам футер главная форма */
+footer {
+  border-top: 1.5px solid #dfa811;
+  background-image: url(../images/bg-img-footer.jpg);
+  margin-top: 3rem;
+  padding: 2rem;
+  
+}
+
+/* в футере настройки для списка */
+.footer-ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+  color: #ebdec2;
+}
+
+/* настройки для элементов списка в футере */
+.footer-ul li {
+  display: flex;
+  flex: 1; /* Занимает равное пространство */
+  text-align: left; /* Центрируем текст */
+}
+.footer-ul li a{
+  color: #ebdec2;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;  
+}
+
+/* FOOTER ANIMATION TEXT LINE */
+.footer-ul li a::after {
+  content: '';
+  display: block;
+  width: 100%;
+  background-color: #ebdec2;
+  height: 2px;
+  transition: all .3s;
+  transform: scale(0);
+} 
+.footer-ul li a:hover:after {
+  transform: scale(1);
+}
+
+/* ссылки на телеграм ютуб и дискорд в футере */
+.media-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.media-links a {
+  margin: 1rem;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.footer-logo a {
+  margin: 1rem;
+
+  color: #ebdec2;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.payment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.payment img {
+  margin: 2rem;
+  width: 5rem;
+  
+}
+
+.copyright-policy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, .4);
+
+}
+.copyright-policy a {
+  margin-bottom: 2rem;
+  text-decoration: none;
+  color: rgba(255, 255, 255, .4);
+  
+}
