@@ -29,8 +29,10 @@
 
     <!-- Nav-bar Начало -->
     <header>
-        <nav class="navbar navbar-expand-lg">
+        <nav class="fixed-top navbar b-radius-1 navbar-expand-lg z-3">
             <div class="container-fluid">
+
+                <!-- LEFT SIDE -->
                 <a class="navbar-brand" href="index.html">R-Store</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,11 +40,121 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="catalog.html">каталог</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">catalog</a>
+                            <!-- class="nav-link active" aria-current="page" href="catalog.html"> -->
+                            <ul class="dropdown-menu mt-2">
+                                <li><a class="dropdown-item" href="catalog.html">all games</a></li>
+                                <li><a class="dropdown-item" href="catalog.html">action</a></li>
+                                <li><a class="dropdown-item" href="catalog.html">indi</a></li>
+                                <li><a class="dropdown-item" href="catalog.html">online</a></li>
+                                <li><a class="dropdown-item" href="catalog.html">rpg</a></li>
+                                <li><a class="dropdown-item" href="catalog.html">rts</a></li>
+                                <li><a class="dropdown-item" href="catalog.html">sport</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
+                <!-- LEFT SIDE КОНЕЦ-->
+
+
+                <!-- RIGHT SIDE -->
+                <div class="right-side">
+
+                    <!-- форма поиска -->
+                    <form class="d-flex" role="search">
+                        <input class="form-control" id="form-search" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <button class="btn btn-outline-warning mx-2" type="submit">Search</button>
+                    </form>
+                    <!-- форма поиска конец-->
+
+                    <!-- кнопки USER и КОРЗИНА -->
+                    <div class="d-flex user-nav-btns">
+
+                        <!-- кнопка USER -->
+                        <div class="dropdown btn-user">
+                            <a href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                aria-expanded="false">
+                                <i class="fa-regular fa-user fa-lg" style="color: #ffffff;"></i>
+                            </a>
+
+                            <!-- сама выпадная менюшка авторизации в кнопке USER -->
+                            <div class="dropdown-menu dropdown-menu-end p-0 dropdown-user-auth-container">
+
+                                <ul class="user-auth">
+
+                                    <li class="drop-down-item " style="text-transform: uppercase;">
+                                        <h4>авторизация</h4>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider-light">
+                                    </li>
+                                    <li class="drop-down-item"><label for="inputEmail" class="form-label">Email
+                                            address</label></li>
+                                    <li class="drop-down-item"><input type="email" class="form-control"
+                                            placeholder="name@example.com"></li>
+                                    <li class="drop-down-item"><label for="inputPassword"
+                                            class="form-label">Password</label></li>
+                                    <li class="drop-down-item"><input type="password" class="form-control"
+                                            placeholder="name@example.com"></li>
+
+                                    <!-- кнопка ВОЙТИ -->
+                                    <div class="log-in-btn">
+                                        <li class="drop-down-item"><a href="#" id="account">Войти</a></li>
+                                    </div>
+                                    <!-- кнопка ВОЙТИ конец -->
+
+                                    <div class="d-flex btn-reg">
+                                        <li class="drop-down-item"><a href="#" id="account-create">Создать аккаунт</a></li>
+                                        <li class="drop-down-item"><a href="#" style="font-size: 0.9rem;">Забыли
+                                                пароль?</a></li>
+                                    </div>
+                                    <!-- <li><hr class="dropdown-divider-light"></li> -->
+
+
+                                </ul>
+
+                                <div class="input-social">
+                                    <div class="social-title">
+                                        <p>Войти через привязанный аккаунт</p>
+                                    </div>
+                                    <div class="social-wrapper">
+                                        <a href="#" class="social-item"><i class="fa-brands fa-google fa-2xl"
+                                                style="color: #ffffff;"></i></a>
+                                        <a href="#" class="social-item"><i class="fa-brands fa-vk fa-2xl"
+                                                style="color: #ffffff;"></i></a>
+                                        <a href="#" class="social-item"><i class="fa-brands fa-steam fa-2xl"
+                                                style="color: #ffffff;"></i></a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!-- кнопка USER конец-->
+
+
+                        <!-- По идее списку user-auth нужно задать фиксированную ширину и position: absolute. 
+                         Потом его и кнопку обернуть в div с position: relative, чтобы абсолютное позиционирование 
+                         считалось внутри этого элемента. Но на все это могут наложиться стили бутстрапа, так что 
+                         надо поэкспериментировать -->
+
+                        <!-- кнопка КОРЗИНА -->
+                        <div class="btn-cart">
+                            <a href="#">
+                                <i class="fa-solid fa-cart-shopping fa-lg" style="color: #ffffff;"></i>
+
+                                <span class="ms-1 badge text-bg-secondary">4</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- кнопки авторизации и корзины конец-->
+
+                </div>
+                <!-- RIGHT SIDE КОНЕЦ-->
+
             </div>
         </nav>
     </header>
@@ -53,7 +165,7 @@
     <!-- Catalog товаров Начало -->
     <section>
         <!-- общий контейнер -необходим бутстрапу -->
-        <div class="contaner-fluid">
+        <div class="contaner-fluid main-card-container">
             <!-- ряд, в кот. у нас слева и справа будет (пока что пустой отступ), справа пустой отступ,
              а по центру карточки товаров -->
             <div class="row">

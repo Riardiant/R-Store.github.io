@@ -46,7 +46,7 @@
 
     <!-- Nav-bar Начало -->
     <header>
-        <nav class="navbar b-radius-1 navbar-expand-lg z-3">
+        <nav class="fixed-top navbar b-radius-1 navbar-expand-lg z-3">
             <div class="container-fluid">
 
                 <!-- LEFT SIDE -->
@@ -59,7 +59,7 @@
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">Хуялог</a>
+                                aria-expanded="false">catalog</a>
                             <!-- class="nav-link active" aria-current="page" href="catalog.html"> -->
                             <ul class="dropdown-menu mt-2">
                                 <li><a class="dropdown-item" href="catalog.html">all games</a></li>
@@ -92,7 +92,8 @@
 
                         <!-- кнопка USER -->
                         <div class="dropdown btn-user">
-                            <a href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                            <a href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                aria-expanded="false">
                                 <i class="fa-regular fa-user fa-lg" style="color: #ffffff;"></i>
                             </a>
 
@@ -100,20 +101,36 @@
                             <div class="dropdown-menu dropdown-menu-end p-0 dropdown-user-auth-container">
 
                                 <ul class="user-auth">
-                                
-                                    <li class="drop-down-item " style="text-transform: uppercase;" ><h4>авторизация</h4></li>
-                                    <li><hr class="dropdown-divider-light"></li>
-                                    <li class="drop-down-item"><label for="inputEmail" class="form-label">Email address</label></li>
-                                    <li class="drop-down-item"><input type="email" class="form-control" placeholder="name@example.com"></li>
-                                    <li class="drop-down-item"><label for="inputPassword" class="form-label">Password</label></li>
-                                    <li class="drop-down-item"><input type="password" class="form-control" placeholder="name@example.com"></li>
+
+                                    <li class="drop-down-item " style="text-transform: uppercase;">
+                                        <h4>авторизация</h4>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider-light">
+                                    </li>
+                                    <li class="drop-down-item"><label for="inputEmail" class="form-label">Email
+                                            address</label></li>
+                                    <li class="drop-down-item"><input type="email" class="form-control"
+                                            placeholder="name@example.com"></li>
+                                    <li class="drop-down-item"><label for="inputPassword"
+                                            class="form-label">Password</label></li>
+                                    <li class="drop-down-item"><input type="password" class="form-control"
+                                            placeholder="name@example.com"></li>
+
+                                    <!-- кнопка ВОЙТИ -->
+                                    <div class="log-in-btn">
+                                        <li class="drop-down-item"><a href="#" id="account">Войти</a></li>
+                                    </div>
+                                    <!-- кнопка ВОЙТИ конец -->
+
                                     <div class="d-flex btn-reg">
-                                        <li class="drop-down-item"><a href="#" id="account">Создать аккаунт</a></li>
-                                        <li class="drop-down-item"><a href="#" style="font-size: 0.9rem;">Забыли пароль?</a></li>
+                                        <li class="drop-down-item"><a href="#" id="account-create">Создать аккаунт</a></li>
+                                        <li class="drop-down-item"><a href="#" style="font-size: 0.9rem;">Забыли
+                                                пароль?</a></li>
                                     </div>
                                     <!-- <li><hr class="dropdown-divider-light"></li> -->
-                                
-                                    
+
+
                                 </ul>
 
                                 <div class="input-social">
@@ -121,14 +138,17 @@
                                         <p>Войти через привязанный аккаунт</p>
                                     </div>
                                     <div class="social-wrapper">
-                                        <a href="#" class="social-item"><i class="fa-brands fa-google fa-2xl" style="color: #ffffff;"></i></a>
-                                        <a href="#" class="social-item"><i class="fa-brands fa-vk fa-2xl" style="color: #ffffff;"></i></a>
-                                        <a href="#" class="social-item"><i class="fa-brands fa-steam fa-2xl" style="color: #ffffff;"></i></a>
+                                        <a href="#" class="social-item"><i class="fa-brands fa-google fa-2xl"
+                                                style="color: #ffffff;"></i></a>
+                                        <a href="#" class="social-item"><i class="fa-brands fa-vk fa-2xl"
+                                                style="color: #ffffff;"></i></a>
+                                        <a href="#" class="social-item"><i class="fa-brands fa-steam fa-2xl"
+                                                style="color: #ffffff;"></i></a>
                                     </div>
                                 </div>
 
                             </div>
-                                                           
+
                         </div>
                         <!-- кнопка USER конец-->
 
@@ -140,10 +160,10 @@
 
                         <!-- кнопка КОРЗИНА -->
                         <div class="btn-cart">
-                            <a  href="#">
+                            <a href="#">
                                 <i class="fa-solid fa-cart-shopping fa-lg" style="color: #ffffff;"></i>
-                                
-                            <span class="ms-1 badge text-bg-secondary">4</span>
+
+                                <span class="ms-1 badge text-bg-secondary">4</span>
                             </a>
                         </div>
                     </div>
@@ -161,18 +181,18 @@
 
 
 
-    <!-- КАРУСЕЛЬ Начало -->
+    <!-- КАРУСЕЛЬ И Карта товаров НОВИНКИ И ПРЕДЛОЖЕНИЯ (нестандартный размер сетки) Начало  -->
     <section>
         <!-- общий контейнер -необходим бутстрапу -->
-        <div class="contaner-fluid m-0 p-0">
-            <!-- ряд, в кот. у нас слева и справа будет (пока что пустой отступ), справа пустой отступ,
-             а по КАРУСЕЛЬ -->
-            <div class="row m-0 p-0">
+        <div id="main-content-container" class="contaner-fluid p-0">
+            <!-- ряд, в кот. у нас слева будет пока что пустой отступ, справа пустой отступ,
+             а по центру КАРУСЕЛЬ -->
+            <div class="row p-0 mian-container-for-contetent">
 
                 <!-- пустой отступ -->
                 <div class="col-lg-2"></div>
 
-                <!-- КУРАСЕЛЬ занимает 8 долей из 12 -->
+                <!-- КУРАСЕЛЬ и КАРТЫ ТОВАРА "НОВИНКИ И ПРЕДЛОЖЕНИЯ" занимает 8 долей из 12  по центру -->
                 <div class="col-lg-8 col-md-12 m-0 p-0">
                     <div class="row">
                         <div id="carouselExampleCaptions" class="carousel slide m-0 p-0" data-bs-ride="carousel">
@@ -202,7 +222,7 @@
                                     </div>
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="source/images/shop-item-img/RPG/assassins creed odyssey/0 carousel assassins creed odyssey.jpg"
+                                    <img src="source/images/shop-item-img/RPG/kingdom come deliverance/0 carousel kingdom come deliverance.jpg"
                                         class="d-block w-100" alt="...">
                                     <div class="carousel-caption d-none d-md-block">
                                         <h5>НАЗВАНИЕ ИГРЫ 3</h5>
@@ -223,6 +243,143 @@
                         </div>
                     </div>
 
+
+
+
+                    <!--  -->
+                    <!--  -->
+                    <!--  -->
+
+
+                    <!-- Карта товаров НОВИНКИ И ПРЕДЛОЖЕНИЯ (нестандартный размер сетки) НАЧАЛО -->
+                    <div class="grid-title">
+                        <p>Our choice</p>
+                    </div>
+                    <!-- Главный контейнер -->
+                    <div class="grid-container">
+
+                        <div class="grid-element">
+
+                            <!-- Картинка ИГРЫ -->
+                            <a href="#">
+                                <div class="effect"></div>
+                            </a> <!-- Тень чтобы название игры было видно из за нее ссылка на картинку не рабоатет -->
+                            <img src="source/images/shop-item-img/ONLINE/battlefield 3/feoxumyfgjp4uoy81HQlL8ot9JfD550k.jpg"
+                                alt="">
+
+                            <!-- Название игры Цена Скидка и Кнопка КУПИТЬ СЕЙЧАС -->
+                            <div class="grid-elem-info">
+                                <!-- название игры -->
+                                <div class="info-title">
+                                    <a href="#">
+                                        <p>Game Title</p>
+                                    </a>
+                                </div>
+                                <!-- кнопка КУПИТЬ СЕЙЧАС -->
+                                <a href="#" class="btn btn-primary">Buy Now</a>
+                                <!-- ЦЕНА -->
+                                <div id="finally-price">
+                                    <span>75$</span>
+                                </div>
+                                <!-- СКИДКА -->
+                                <div id="discount" class="badge text-bg-danger">
+                                    <span>25%</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="grid-element">
+                            <a href="#">
+                                <div class="effect"></div>
+                            </a>
+                            <img src="source/images/shop-item-img/ONLINE/star wars battlefront/5vNddFfs7QCNKUcFWD-CoITcy8gggCYJ.jpg"
+                                alt="">
+
+                            <!-- Название игры Цена Скидка и Кнопка КУПИТЬ СЕЙЧАС -->
+                            <div class="grid-elem-info">
+                                <!-- название игры -->
+                                <div class="info-title">
+                                    <a href="#">
+                                        <p>Game Title</p>
+                                    </a>
+                                </div>
+                                <!-- кнопка КУПИТЬ СЕЙЧАС -->
+                                <a href="#" class="btn btn-primary">Buy Now</a>
+                                <!-- ЦЕНА -->
+                                <div id="finally-price">
+                                    <span>75$</span>
+                                </div>
+                                <!-- СКИДКА -->
+                                <div id="discount" class="badge text-bg-danger">
+                                    <span>25%</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="grid-element">
+                            <a href="#">
+                                <div class="effect"></div>
+                            </a>
+                            <img src="source/images/shop-item-img/ONLINE/world of wacraft/MT94JbjirPQR7QeBi3jhrQh1TnjTDA3Z.jpg"
+                                alt="">
+
+                            <!-- Название игры Цена Скидка и Кнопка КУПИТЬ СЕЙЧАС -->
+                            <div class="grid-elem-info">
+                                <!-- название игры -->
+                                <div class="info-title">
+                                    <a href="#">
+                                        <p>Game Title</p>
+                                    </a>
+                                </div>
+                                <!-- кнопка КУПИТЬ СЕЙЧАС -->
+                                <a href="#" class="btn btn-primary">Buy Now</a>
+                                <!-- ЦЕНА -->
+                                <div id="finally-price">
+                                    <span>75$</span>
+                                </div>
+                                <!-- СКИДКА -->
+                                <div id="discount" class="badge text-bg-danger">
+                                    <span>25%</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="grid-element">
+                            <a href="#">
+                                <div class="effect"></div>
+                            </a>
+                            <img
+                                    src="source/images/shop-item-img/ONLINE/the crew 2/Wo6kGEnAoyLuSseFEkEqdg9DktxUMB0L.jpg"
+                                    alt="">
+
+                            <!-- Название игры Цена Скидка и Кнопка КУПИТЬ СЕЙЧАС -->
+                            <div class="grid-elem-info">
+                                <!-- название игры -->
+                                <div class="info-title">
+                                    <a href="#">
+                                        <p>Game Title</p>
+                                    </a>
+                                </div>
+                                <!-- кнопка КУПИТЬ СЕЙЧАС -->
+                                <a href="#" class="btn btn-primary">Buy Now</a>
+                                <!-- ЦЕНА -->
+                                <div id="finally-price">
+                                    <span>75$</span>
+                                </div>
+                                <!-- СКИДКА -->
+                                <div id="discount" class="badge text-bg-danger">
+                                    <span>25%</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                    <!-- Карта товаров НОВИНКИ И ПРЕДЛОЖЕНИЯ КОНЕЦ -->
+
                 </div>
 
                 <!-- пустой отступ -->
@@ -232,7 +389,10 @@
 
         </div>
     </section>
-    <!-- КАРУСЕЛЬ Конец -->
+    <!-- КАРУСЕЛЬ И Карта товаров НОВИНКИ И ПРЕДЛОЖЕНИЯ (нестандартный размер сетки) Конец -->
+
+
+
 
 
 
